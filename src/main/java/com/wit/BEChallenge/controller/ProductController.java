@@ -90,8 +90,8 @@ public class ProductController {
 
     //TODO ÇALIŞANA KADAR DEVAM
     @GetMapping("/")
-    public List<ProductResponse> findByParams(@RequestParam(name = "limit", required = false) Long limit,
-                                              @RequestParam(name = "offset", required = false) Long offset,
+    public List<ProductResponse> findByParams(@RequestParam(name = "limit", required = false, defaultValue = "24") Long limit,
+                                              @RequestParam(name = "offset", required = false,defaultValue = "0") Long offset,
                                               @RequestParam(name = "category", required = false) Integer categoryId,
                                               @RequestParam(name = "filter", required = false) String filter,
                                               @RequestParam(name = "sort", required = false) String sort) {
