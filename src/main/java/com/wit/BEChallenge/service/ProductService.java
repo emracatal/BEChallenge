@@ -15,9 +15,11 @@ public interface ProductService {
 
     ProductResponse delete(Long id);
 
-    //TODO ÇALIŞANA KADAR DEVAM
     List<ProductResponse> findByCategoryId(Integer categoryId);
 
+    //RESTTEMPLATEBUILDER İÇİN KULLANDIM
     List<Product> saveAll(List<Product> products);
+
+    List<ProductResponse> findByRequestParams(Integer categoryId,String sort,String filter,Long limit,Long offset);
 
 }

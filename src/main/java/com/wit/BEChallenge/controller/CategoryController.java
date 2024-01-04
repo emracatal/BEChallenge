@@ -38,4 +38,6 @@ public class CategoryController {
     public CategoryResponse delete(@PathVariable Long id) {
         return categoryService.delete(id);
     }
+
+    //TODO OPTIONAL https://workintech-fe-ecommerce.onrender.com/categories üzerinden data almak için RESTTEMPLATEBUILDER yapabilirsin
 }

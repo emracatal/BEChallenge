@@ -95,12 +95,8 @@ public class ProductController {
                                               @RequestParam(name = "category", required = false) Integer categoryId,
                                               @RequestParam(name = "filter", required = false) String filter,
                                               @RequestParam(name = "sort", required = false) String sort) {
-        System.out.println("Limit: " + limit);
-        System.out.println("Offset: " + offset);
-        System.out.println("Category: " + categoryId + " - Type: " + categoryId.getClass().getSimpleName());
-        System.out.println("Filter: " + filter);
-        System.out.println("Sort: " + sort);
 
-        return productService.findByCategoryId(categoryId);
+
+        return productService.findByRequestParams(categoryId,sort,filter,limit,offset);
     }
 }
