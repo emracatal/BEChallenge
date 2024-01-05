@@ -13,4 +13,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query(value = "SELECT * FROM s20.products WHERE category_id = :categoryId", nativeQuery = true)
     List<Product> findByCategoryId(@Param("categoryId") Integer categoryId);
 
+    @Query(value = "SELECT * FROM s20.products ORDER BY sell_count DESC LIMIT 8", nativeQuery = true)
+    List<Product> bestSeller8();
+
 }

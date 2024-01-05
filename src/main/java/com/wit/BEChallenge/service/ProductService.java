@@ -22,4 +22,6 @@ public interface ProductService {
 
     List<ProductResponse> findByRequestParams(Integer categoryId,String sort,String filter,Long limit,Long offset);
 
+    List<ProductResponse> bestSeller8();
+
 }

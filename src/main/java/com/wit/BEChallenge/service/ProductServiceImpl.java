@@ -125,4 +125,9 @@ public class ProductServiceImpl implements ProductService {
                                 product.getPrice(), product.getStock(), product.getRating(), product.getImage()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<ProductResponse> bestSeller8() {
+        return Converter.ProductListConverter(productRepository.bestSeller8());
+    }
 }

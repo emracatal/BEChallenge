@@ -88,10 +88,10 @@ public class ProductController {
         return "Completed";
     }
 
-    //TODO ÇALIŞANA KADAR DEVAM
+    //TODO DOĞRU ÇALIŞANA KADAR DEVAM
     @GetMapping("/")
-    public List<ProductResponse> findByParams(@RequestParam(name = "limit", required = false, defaultValue = "24") Long limit,
-                                              @RequestParam(name = "offset", required = false,defaultValue = "0") Long offset,
+    public List<ProductResponse> findByParams(@RequestParam(name = "limit", required = false) Long limit,
+                                              @RequestParam(name = "offset", required = false) Long offset,
                                               @RequestParam(name = "category", required = false) Integer categoryId,
                                               @RequestParam(name = "filter", required = false) String filter,
                                               @RequestParam(name = "sort", required = false) String sort) {
@@ -99,4 +99,14 @@ public class ProductController {
 
         return productService.findByRequestParams(categoryId,sort,filter,limit,offset);
     }
-}
+
+    /**
+     * This method used in ecommerce website homepage
+     * @return 8 bestseller products list
+     */
+    @GetMapping("/bestseller8")
+    public List<ProductResponse> bestSeller8() {
+        return productService.bestSeller8();
+    }
+
+    }
