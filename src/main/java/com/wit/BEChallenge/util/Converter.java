@@ -2,8 +2,11 @@ package com.wit.BEChallenge.util;
 
 import com.wit.BEChallenge.dto.CategoryResponse;
 import com.wit.BEChallenge.dto.ProductResponse;
+import com.wit.BEChallenge.dto.RegisterUser;
+import com.wit.BEChallenge.dto.UserResponse;
 import com.wit.BEChallenge.entity.Category;
 import com.wit.BEChallenge.entity.Product;
+import com.wit.BEChallenge.entity.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,5 +35,9 @@ public class Converter {
 
     public static ProductResponse ProductConverter(Product product) {
         return new ProductResponse(product.getId(), product.getName(), product.getDescription(), product.getPrice(), product.getStock(), product.getRating(), product.getImage());
+    }
+
+    public static UserResponse UserConverter(User user) {
+        return new UserResponse(user.getId(), user.getFullName(),user.getEmail());
     }
 }

@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/categories")
-@CrossOrigin("*")
+//@CrossOrigin("*")
 public class CategoryController {
     private CategoryService categoryService;
 
@@ -19,7 +19,7 @@ public class CategoryController {
         this.categoryService = categoryService;
     }
 
-    @GetMapping("/")
+    @GetMapping("")
     public List<CategoryResponse> findAll() {
         return categoryService.findAll();
     }

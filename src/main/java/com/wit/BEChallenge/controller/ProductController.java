@@ -4,12 +4,10 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.wit.BEChallenge.dto.ProductResponse;
 import com.wit.BEChallenge.entity.Category;
 import com.wit.BEChallenge.entity.Product;
-import com.wit.BEChallenge.exceptions.CommerceException;
 import com.wit.BEChallenge.service.CategoryService;
 import com.wit.BEChallenge.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
@@ -19,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/products")
-@CrossOrigin("*")
+//@CrossOrigin("*")
 public class ProductController {
     private ProductService productService;
     private CategoryService categoryService;
