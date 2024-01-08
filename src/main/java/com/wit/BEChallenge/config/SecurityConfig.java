@@ -58,7 +58,7 @@ public class SecurityConfig {
                     auth.requestMatchers("/roles/**").permitAll();
                     auth.requestMatchers("/categories/**").permitAll();
                     auth.requestMatchers("/products/**").permitAll();
-                    auth.requestMatchers("/admin/**").hasAuthority("admin"); //buraya gidecek kullanıcı admin olmalı
+                    auth.requestMatchers("/admin/**").hasAuthority("admin"); //buraya gidecek kullanıcı admin olmalıı
                     //auth.requestMatchers("/welcome/**").hasAnyAuthority("USER", "ADMIN");
                     //auth.requestMatchers("/user/login**").hasAnyAuthority("user", "admin"); bunu kapatında 403 sorununu çözdüm
                     auth.anyRequest().authenticated(); //üsttekiler hariç tüm requestler authanticated olmalı demek, bu UserService'de loadByUserName çağırıyor
